@@ -4,6 +4,8 @@ import logo from '../../images/ubereat.png'
 import { Link, useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
 
+import SecuredRoute from '../PrivateRoute'
+
 const Login = () => {
     // Gestion de la redirection
     const history = useHistory();
@@ -33,6 +35,7 @@ const Login = () => {
         firebase.login(email, password)
             .then(res => {
                 console.log(res)
+                SecuredRoute.authentication.onAuthentication();
                 history.push('/accueil')
             })
             .catch(err => {

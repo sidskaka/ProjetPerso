@@ -6,6 +6,7 @@ import Footer from '../Footer'
 import Accueil from '../Accueil'
 import Login from '../Login'
 import Signup from '../Signup'
+import RecipeDetails from '../Accueil/RecipeDetails'
 import Error from '../Error'
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                 <Route exact path="/" component={Login} />
                 <Route path="/signup" component={Signup} />
                 <Route path="/accueil" component={Accueil} />
+                <Route path="/details/:id" component={RecipeDetails} />
                 <Route component={Error} />
             </Switch>
 

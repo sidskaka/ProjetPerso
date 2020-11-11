@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Accueil",
+    "\\src\\components\\Accueil\\Deconnexion",
+    "\\src\\components\\Accueil\\RecipeDetails",
+    "\\src\\components\\Error",
+    "\\src\\components\\Firebase",
+    "\\src\\components\\Login",
+    "\\src\\components\\Signup"
+  ],
+  "SelectedNode": "\\.eslintrc.json",
+  "PreviewInSolutionExplorer": false
+}
