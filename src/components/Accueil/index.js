@@ -46,10 +46,10 @@ const Accueil = () => {
 			<div>
 				<DivDisconnect>
 					<div>
-						<div style={{ float: 'left' }}>
+						<Div>
 							<ImgIconLog src={iconeLog} />
-						</div>
-						<div style={{ float: 'left' }}>
+						</Div>
+						<Div>
 							<Nav>
 								<Ul>
 									<Li>
@@ -64,7 +64,7 @@ const Accueil = () => {
 									</Li>
 								</Ul>
 							</Nav>
-						</div>
+						</Div>
 					</div>
 				</DivDisconnect>
 				<Second_div>
@@ -91,6 +91,10 @@ const Accueil = () => {
 		</First_div>
     )
 }
+
+const Div = styled.div`
+	float: left;
+`
 
 const ImgIconLog = styled.img`
 	width: 8%;
