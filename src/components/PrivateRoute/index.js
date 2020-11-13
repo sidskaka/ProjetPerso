@@ -1,36 +1,24 @@
-/*import React from "react";
-import { Route, Redirect } from "react-router-dom";
-import auth from "../auth";
-//import { FirebaseContext } from '../Firebase'
+import React from 'react'
 
-const ProtectedRoute = ({
+import { Redirect, Route } from 'react-router-dom'
 
-    component: Component,
-    ...rest
-}) => {
-    *//*const fire = useContext(FirebaseContext)
-    console.log(fire)*//*
+const PrivateRoute = ({ component: Component, ...rest }) => {
+   
     return (
         <Route
             {...rest}
-            render={props => {
-                if (auth.isAuthenticated()) {
-                    return <Component {...props} />;
-                } else {
-                    return (
-                        <Redirect
-                            to={{
-                                pathname: "/",
-                                state: {
-                                    from: props.location
-                                }
-                            }}
-                        />
-                    );
-                }
+            render={props =>
+            {
+                return (
+                    console.log(localStorage),
+                    localStorage.getItem("token") ?
+                        (<Component {...props} />) : (<Redirect to='/'></Redirect>)
+                    )
             }}
-        />
-    );
-};
+        >
 
-export default ProtectedRoute*/
+        </Route>
+    )
+}
+
+export default PrivateRoute

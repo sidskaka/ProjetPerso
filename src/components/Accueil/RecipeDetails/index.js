@@ -17,6 +17,7 @@ const RecipeDetails = () => {
 
 	const handleClick = () => {
 		firebase.disconnect()
+		localStorage.clear();
 		history.push("/")
 	}
 	const id = useParams('id').id;
@@ -81,33 +82,41 @@ const RecipeDetails = () => {
 						<ImgRecip src={`https://spoonacular.com/cdn/ingredients_100x100/${recipe.image}`} />
 						<br />
 						<div>
-							{recipe.name}
-						</div>
-						<div>
-							<span>Aisle: </span><span>{recipe.aisle}</span>
-						</div>
+							<div style={{ float: 'left' }}>
+								<div>
+									{recipe.name}
+								</div>
+								<div>
+									<span>Aisle: </span><span>{recipe.aisle}</span>
+								</div>
 						
-						<div>
-							<span>Consistency: </span><span>{recipe.consistency}</span>
-						</div>
-						<div>
-							<span>Original: </span><span>{recipe.original}</span>
-						</div>
-						<div>
-							<span>Original name: </span><span>{recipe.originalName}</span>
-						</div>
-						<div>
-							<span>Possible units: </span><br />
-							<ul>
-								{pUnits.map(pu =>
-									<li key={ pu }>{ pu }</li>	
-								)}
-							</ul>
+								<div>
+									<span>Consistency: </span><span>{recipe.consistency}</span>
+								</div>
+								<div>
+									<span>Original: </span><span>{recipe.original}</span>
+								</div>
+								<div>
+									<span>Original name: </span><span>{recipe.originalName}</span>
+								</div>
+								<div>
+									<span>Possible units: </span><br />
+									<ul>
+										{pUnits.map(pu =>
+											<li key={ pu }>{ pu }</li>	
+										)}
+									</ul>
+								</div>
+							</div>
+							<div style={{ float: 'left' }}>
+								xxx
+							</div>
 						</div>
 						<br />
 						<br />
+
 					</div>
-					<div>
+					<div style={{clear: "both", height: "0"}}>
 						<NavLink to="/accueil">Retour</NavLink>
 					</div>
 				</Second_div>

@@ -8,7 +8,7 @@ import iconeLog from '../../images/log.png'
 
 
 const Accueil = () => {
-
+	//console.log(props)
 	const history = useHistory();
 
 	const firebase = useContext(FirebaseContext);
@@ -18,6 +18,7 @@ const Accueil = () => {
 	const [recipes, setRecipes] = useState([])
 
 	useEffect(() => {
+		console.log(localStorage)
 		axios({
 			method: 'GET',
 			url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information',
@@ -38,6 +39,7 @@ const Accueil = () => {
 
 	const handleClick = () => {
 		firebase.disconnect()
+		localStorage.clear();
 		history.push('/')
     }
 

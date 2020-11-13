@@ -4,15 +4,13 @@ import logo from '../../images/ubereat.png'
 import { Link, useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
 
-import SecuredRoute from '../PrivateRoute'
-
 const Login = () => {
     // Gestion de la redirection
     const history = useHistory();
 
     // Utilisation du firebase depuis notre context
     const firebase = useContext(FirebaseContext)
-    console.log(firebase)
+    //console.log(firebase)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -35,7 +33,8 @@ const Login = () => {
         firebase.login(email, password)
             .then(res => {
                 console.log(res)
-                SecuredRoute.authentication.onAuthentication();
+                console.log(res.user.refreshToken)
+                localStorage.setItem('token', res.user.refreshToken)
                 history.push('/accueil')
             })
             .catch(err => {
@@ -53,13 +52,11 @@ const Login = () => {
                     <Img src={logo} />
                     {erreur !== '' ? <Span>erreur</Span> : ''}
                     <form onSubmit={ handleSubmit }>
-                        <p>
-                            
+                        <p>                           
                             <Input onChange={e => setEmail(e.target.value)} value={email} type="email" required autoComplete="on" />
                         </p>
                         <p>
-                            <Input onChange={e => setPassword(e.target.value)} value={password} type="password" required autoComplete="off" />
-                            
+                            <Input onChange={e => setPassword(e.target.value)} value={password} type="password" required autoComplete="off" />                            
                         </p>
 
                         <Third_div className="">
