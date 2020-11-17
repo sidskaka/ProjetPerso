@@ -109,7 +109,7 @@ const RecipeDetails = () => {
 								</div>
 							</div>
 							<div style={{ float: 'left' }}>
-								xxx
+								
 							</div>
 						</div>
 						<br />
@@ -132,7 +132,7 @@ const Div = styled.div`
 const ImgIconLog = styled.img`
 	width: 8%;
 	margin-left: 93%;
-	margin-top: 1%;
+	margin-top: 2%;
 `
 
 const ImgRecip = styled.img`
@@ -162,6 +162,7 @@ const Nav = styled.nav`
     background-color: white;
     position: sticky;
     top: 0px;
+	background-color: inherit;
 `
 
 const Ul = styled.ul`

@@ -21,8 +21,8 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={Login} />
                 <Route path="/signup" component={Signup} />
-                <PrivateRoute path="/accueil" component={Accueil} />
-                <PrivateRoute path="/details/:id" component={RecipeDetails} />
+                <PrivateRoute path="/accueil" component={Accueil} />                
+                <PrivateRoute path="/details/:id" component={RecipeDetails} />                
                 <Route component={Error} />
             </Switch>
 
@@ -30,5 +30,10 @@ const App = () => {
         </Router>
     )
 }
+
+/*
+ <PrivateRoute path="/accueil" component={Accueil} />
+ <PrivateRoute path="/details/:id" component={RecipeDetails} />
+ */
 
 export default App;

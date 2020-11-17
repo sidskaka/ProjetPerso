@@ -1,6 +1,8 @@
 html {
-    background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+    background: url(https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/c7e1c939303e270185f0e891858e04ee.svg) no-repeat;
     background-size: cover;
     height: 100%;
+    background-repeat: repeat;
 }
 
+/*background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;*/
