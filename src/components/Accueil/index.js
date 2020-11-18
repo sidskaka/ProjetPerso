@@ -183,7 +183,7 @@ const DivDisconnect = styled.div`
 	float: right;
 `
 const Second_div = styled.div`
-    background-color: rgba(72,72,72,0.4);
+    background-color: rgba(65,185,56,0.9);
     padding-left: 35px;
     padding-right: 35px;
     padding-top: 35px;
