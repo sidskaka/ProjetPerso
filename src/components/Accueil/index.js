@@ -24,14 +24,6 @@ const Accueil = () => {
     const firebase = useContext(FirebaseContext);
 
     useEffect(() => {
-        /*const fetchPosts = async () => {
-            setLoading(true);
-            const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            setRecipes(res.data);
-            setLoading(false);
-        };
-
-        fetchPosts();*/
         axios({
             method: 'GET',
             url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information',
