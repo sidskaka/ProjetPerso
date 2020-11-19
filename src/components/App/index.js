@@ -11,9 +11,7 @@ import PrivateRoute from '../PrivateRoute'
 import Error from '../Error'
 
 const App = () => {
-    /*useEffect(() => {
-        localStorage.
-    })*/
+
     return (
         <Router>
             <Header />
@@ -30,10 +28,5 @@ const App = () => {
         </Router>
     )
 }
-
-/*
- <PrivateRoute path="/accueil" component={Accueil} />
- <PrivateRoute path="/details/:id" component={RecipeDetails} />
- */
 
 export default App;

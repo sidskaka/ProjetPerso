@@ -7,7 +7,7 @@ import Pagination from './components/Pagination';*/
 import Pagination from './Pagination';
 import styled from 'styled-components'
 import iconeLog from '../../images/log.png'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
 import logo from '../../images/ubereat.png'
 
@@ -17,7 +17,7 @@ const Accueil = () => {
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     //const [postsPerPage, setPostsPerPage] = useState(10)
-    const [recipesPerPage, setRecipesPerPage] = useState(3)
+    const [recipesPerPage,] = useState(3)
 
     const PUBLIC_KEY = process.env.REACT_APP_RECIPE_API_KEY;
     const history = useHistory();
