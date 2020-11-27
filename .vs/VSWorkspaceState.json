@@ -4,13 +4,11 @@
     "\\src",
     "\\src\\components",
     "\\src\\components\\Accueil",
-    "\\src\\components\\Accueil\\Deconnexion",
+    "\\src\\components\\Accueil\\Pagination",
     "\\src\\components\\Accueil\\RecipeDetails",
-    "\\src\\components\\Error",
-    "\\src\\components\\Firebase",
-    "\\src\\components\\Login",
-    "\\src\\components\\Signup"
+    "\\src\\components\\Accueil\\Recipes",
+    "\\src\\components\\App"
   ],
-  "SelectedNode": "\\.eslintrc.json",
+  "SelectedNode": "\\src\\components\\App\\index.js",
   "PreviewInSolutionExplorer": false
 }
